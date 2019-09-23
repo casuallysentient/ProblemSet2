@@ -47,29 +47,37 @@ public class ProblemSet2 {
     * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
     * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
     */
+    int singleValue = 100;
+    int quarterValue = 25;
+    int dimeValue = 10;
+    int nickelValue = 5;
+    int pennyValue = 1;
+
     System.out.print("\nEnter a dollar amount: ");
-    double dollarAmount = in.nextDouble();
+    double dollarAmount1 = in.nextDouble();
 
-    int numDollars = (int) Math.floor(dollarAmount / 1);
-    dollarAmount = dollarAmount % 1;
+    int pennyAmount1 = (int) (dollarAmount1 * 100);
 
-    int numQuarters = (int) Math.floor(dollarAmount / 0.25);
-    dollarAmount = dollarAmount % 0.25;
+    int numSingles1 = pennyAmount1 / singleValue;
+    pennyAmount1 = pennyAmount1 % singleValue;
 
-    int numDimes = (int) Math.floor(dollarAmount / 0.1);
-    dollarAmount = dollarAmount % 0.1;
+    int numQuarters1 = pennyAmount1 / quarterValue;
+    pennyAmount1 = pennyAmount1 % quarterValue;
 
-    int numNickels = (int) Math.floor(dollarAmount / 0.05);
-    dollarAmount = dollarAmount % 0.05;
+    int numDimes1 = pennyAmount1 / dimeValue;
+    pennyAmount1 = pennyAmount1 % dimeValue;
 
-    int numPennies = (int) Math.floor(dollarAmount / 0.01);
-    dollarAmount = dollarAmount % 0.01;
+    int numNickels1 = pennyAmount1 / nickelValue;
+    pennyAmount1 = pennyAmount1 % nickelValue;
 
-    System.out.println("\nDOLLARS  : " + numDollars);
-    System.out.println("QUARTERS : " + numQuarters);
-    System.out.println("DIMES    : " + numDimes);
-    System.out.println("NICKELS  : " + numNickels);
-    System.out.println("PENNIES  : " + numPennies);
+    int numPennies1 = pennyAmount1 / pennyValue;
+    pennyAmount1 = pennyAmount1 % pennyValue;
+
+    System.out.println("\nDOLLARS  : " + numSingles1);
+    System.out.println("QUARTERS : " + numQuarters1);
+    System.out.println("DIMES    : " + numDimes1);
+    System.out.println("NICKELS  : " + numNickels1);
+    System.out.println("PENNIES  : " + numPennies1);
 
 
     /*
@@ -78,8 +86,44 @@ public class ProblemSet2 {
     * Given a dollar amount in the range [0.00, 20.00], print the smallest number of
     * bills and coins needed to produce this amount.
     */
+    int twentyValue = 2000;
+    int tenValue = 1000;
+    int fiveValue = 500;
 
+    System.out.print("\nEnter a dollar amount: ");
+    double dollarAmount2 = in.nextDouble();
 
+    int pennyAmount2 = (int) (dollarAmount2 * 100);
+
+    int numTwenties2 = pennyAmount2 / twentyValue;
+    pennyAmount2 = pennyAmount2 % twentyValue;
+
+    int numTens2 = pennyAmount2 / tenValue;
+    pennyAmount2 = pennyAmount2 % tenValue;
+
+    int numFives2 = pennyAmount2 / fiveValue;
+    pennyAmount2 = pennyAmount2 % fiveValue;
+
+    int numSingles2 = pennyAmount2 / singleValue;
+    pennyAmount2 = pennyAmount2 % singleValue;
+
+    int numQuarters2 = pennyAmount2 / quarterValue;
+    pennyAmount2 = pennyAmount2 % quarterValue;
+
+    int numDimes2 = pennyAmount2 / dimeValue;
+    pennyAmount2 = pennyAmount2 % dimeValue;
+
+    int numNickels2 = pennyAmount2 / nickelValue;
+    pennyAmount2 = pennyAmount2 % nickelValue;
+
+    int numPennies2 = (int) (pennyAmount2 / pennyValue);
+    pennyAmount2 = pennyAmount2 % pennyValue;
+
+    int numBills = numTwenties2 + numTens2 + numFives2 + numSingles2;
+    int numCoins = numQuarters2 + numDimes2 + numNickels2 + numPennies2;
+
+    System.out.println("\nBILLS  : " + numBills);
+    System.out.println("COINS  : " + numCoins);
 
     /*
     * Exercise 4.
