@@ -212,7 +212,14 @@ public class ProblemSet2 {
     *
     * Given a side length, print the area and perimeter of the corresponding hexagon.
     */
+    System.out.print("\nEnter a length: ");
+    double hexagonSideLength = in.nextDouble();
 
+    double hexagonArea = Math.pow(hexagonSideLength, 2) * ((3 * Math.sqrt(3)) / 2);
+    double hexagonPerimeter = hexagonSideLength * 6;
+
+    System.out.printf("\nAREA      : %,.2f", hexagonArea);
+    System.out.printf("\nPERIMETER : %,.2f", hexagonPerimeter);
 
 
     /*
