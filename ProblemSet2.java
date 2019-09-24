@@ -40,7 +40,6 @@ public class ProblemSet2 {
     System.out.println("AGE      : " + age);
     System.out.println("HOMETOWN : " + hometown);
 
-
     /*
     * Exercise 2.
     *
@@ -78,7 +77,6 @@ public class ProblemSet2 {
     System.out.println("DIMES    : " + numDimes1);
     System.out.println("NICKELS  : " + numNickels1);
     System.out.println("PENNIES  : " + numPennies1);
-
 
     /*
     * Exercise 3.
@@ -122,8 +120,8 @@ public class ProblemSet2 {
     int numBills = numTwenties2 + numTens2 + numFives2 + numSingles2;
     int numCoins = numQuarters2 + numDimes2 + numNickels2 + numPennies2;
 
-    System.out.println("\nBILLS  : " + numBills);
-    System.out.println("COINS  : " + numCoins);
+    System.out.println("\nBILLS : " + numBills);
+    System.out.println("COINS : " + numCoins);
 
     /*
     * Exercise 4.
@@ -131,8 +129,26 @@ public class ProblemSet2 {
     * Given a number of inches, print the equivalent number of miles, yards, feet,
     * and inches.
     */
+    int inchesInAMile = 63360;
+    int inchesInAYard = 36;
+    int inchesInAFoot = 12;
 
+    System.out.print("\nEnter a number of inches: ");
+    int numInches = in.nextInt();
 
+    int numMiles = numInches / inchesInAMile;
+    numInches = numInches % inchesInAMile;
+
+    int numYards = numInches / inchesInAYard;
+    numInches = numInches % inchesInAYard;
+
+    int numFeet = numInches / inchesInAFoot;
+    numInches = numInches % inchesInAFoot;
+
+    System.out.println("\nMILES  : " + numMiles);
+    System.out.println("YARDS  : " + numYards);
+    System.out.println("FEET   : " + numFeet);
+    System.out.println("INCHES : " + numInches);
 
     /*
     * Exercise 5.
@@ -140,8 +156,21 @@ public class ProblemSet2 {
     * Given a number of centimeters, print the equivalent number of kilometers,
     * meters, and centimeters.
     */
+    int cmInAMeter = 10;
+    int cmInAKilometer = 10000;
 
+    System.out.print("\nEnter a number of centimeters: ");
+    int numCm = in.nextInt();
 
+    int numKilometers = numCm / cmInAKilometer;
+    numCm = numCm % cmInAKilometer;
+
+    int numMeters = numCm / cmInAMeter;
+    numCm = numCm % cmInAMeter;
+
+    System.out.println("\nKILOMETERS   : " + numKilometers);
+    System.out.println("METERS       : " + numMeters);
+    System.out.println("CENTIMETERS  : " + numCm);
 
     /*
     * Exercise 6.
