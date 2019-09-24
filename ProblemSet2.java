@@ -156,8 +156,8 @@ public class ProblemSet2 {
     * Given a number of centimeters, print the equivalent number of kilometers,
     * meters, and centimeters.
     */
-    int cmInAMeter = 10;
-    int cmInAKilometer = 10000;
+    int cmInAMeter = 100;
+    int cmInAKilometer = 100000;
 
     System.out.print("\nEnter a number of centimeters: ");
     int numCm = in.nextInt();
@@ -168,17 +168,24 @@ public class ProblemSet2 {
     int numMeters = numCm / cmInAMeter;
     numCm = numCm % cmInAMeter;
 
-    System.out.println("\nKILOMETERS   : " + numKilometers);
-    System.out.println("METERS       : " + numMeters);
-    System.out.println("CENTIMETERS  : " + numCm);
+    System.out.println("\nKILOMETERS  : " + numKilometers);
+    System.out.println("METERS      : " + numMeters);
+    System.out.println("CENTIMETERS : " + numCm);
 
     /*
     * Exercise 6.
     *
     * Given a diameter, print the area and circumference of the corresponding circle.
     */
+    System.out.print("\nEnter a diameter: ");
+    double diameter = in.nextDouble();
 
+    double radius = diameter / 2;
+    double area = Math.PI * Math.pow(radius, 2);
+    double circumfrence = Math.PI * diameter;
 
+    System.out.printf("\nAREA          : %,.2f", area);
+    System.out.printf("\nCIRCUMFERENCE : %,.2f", circumfrence);
 
     /*
     * Exercise 7.
